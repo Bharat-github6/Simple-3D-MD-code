@@ -148,5 +148,5 @@ plt.plot(time,Etot1,label='Total')
 plt.legend()
 plt.show()
 ```
-[link][1] to the report.
-[1] https://docs.google.com/document/d/1-gpsbFZ10RvMz0UevtK1Uhj7jVtwPdY6BeeCXsrqZTI/edit
+link [https://docs.google.com/document/d/1-gpsbFZ10RvMz0UevtK1Uhj7jVtwPdY6BeeCXsrqZTI/edit] to the full report.
+
