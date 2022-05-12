@@ -1,11 +1,13 @@
-# Simple 3D Moecular Dynamics code (I wrote this for my term project)
-
+##### Simple 3D Moecular Dynamics code (I wrote this for my term project)
+Import the library
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
 from random import *
+```
 
-
+Define the Dimension 
+```
 Natom = 20
 dens = 1.0  # density (1.2 for fcc)
 t  = 0
@@ -25,7 +27,10 @@ Etot1 = np.zeros((itern))
 time = np.arange((itern))
 
 L = 8 		# side of square with atoms
+```
 
+Define Velocity , Forces, cutoff.etc
+```
 def initialposvel(): 
 	for i in range(0,Natom): 
 		x[i] = randint(0,L) 
@@ -78,8 +83,11 @@ def Forces(t,w,PE,PEorW):
 		return PE
 	else:
 		return w
+```
 
+Step size adn PBC
 
+```
 t1 = 0
 PE = 0.0
 h = 0.031 #step
@@ -126,8 +134,12 @@ while t<itern:
         KE1[t] = KE
         Etot1[t] = Etot
         t = t+1
+```
+
+plot Energy as a function of time
 
 
+```
 time = np.arange(0,itern)*h
 plt.figure()
 plt.plot(time,PE1,label='PE')
@@ -135,5 +147,6 @@ plt.plot(time,KE1,label='KE')
 plt.plot(time,Etot1,label='Total')
 plt.legend()
 plt.show()
-
 ```
+[link][1] to the report.
+[1] https://docs.google.com/document/d/1-gpsbFZ10RvMz0UevtK1Uhj7jVtwPdY6BeeCXsrqZTI/edit
